@@ -27,18 +27,3 @@ CObject_dep = declare_dependency(
     include_directories: inc,
     link_with: CObject_shared
 )
-
-example_sources = [
-    './example/ihashable.c',
-    './example/main.c',
-    './example/my_object.c'
-]
-
-example_link_with = [CObject]
-
-executable(
-    'example',
-    example_sources,
-    link_with: example_link_with,
-    include_directories: inc
-)
